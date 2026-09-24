@@ -1,2 +1,2 @@
-streanlit
+streamlit
 rapidfuzz
