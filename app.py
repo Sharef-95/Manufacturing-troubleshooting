@@ -1,14 +1,47 @@
 import streamlit as st
 st.title("Manufacturing Troubleshooting Guide")
 
-
-
 """
-Simple Q&A Program
+Vista Search Engine
 ------------------
 You fill in the questions and answers below.
 Type a question -> get the answer.
 """
+from rapidfuzz import fuzz
+from Rigid1 import Rigid1
+from Rigid2 import Rigid2
+from Rigid4 import Rigid4
+from R2R import R2R
+from EFI1 import EFI1
+from EFI2 import EFI2
+from R2R_Cutter import R2R_Cutter
+from Rigid1_Cutter import Rigid1_Cutter
+from Rigid2_Cutter import Rigid2_Cutter
+from Rigid4_Cutter import Rigid4_Cutter
+from Eurolaser import Eurolaser
+
+Rigid1()
+Rigid2()
+Rigid4()
+R2R()
+EFI1()
+EFI2()
+R2R_Cutter()
+Rigid1_Cutter()
+Rigid2_Cutter()
+Rigid4_Cutter()
+Eurolaser()
+
+
+
+
+
+
+
+
+
+
+
 
 # ======================================================================
 # FILL THIS UP  --  add as many question/answer pairs as you want
@@ -65,30 +98,6 @@ QA_DATA = {
 
 
 
-
-def get_answer(question: str) -> str:
-    """Return the answer for a question (case-insensitive, ignores extra spaces)."""
-    q = question.strip().lower()
-
-    for stored_q, stored_a in QA_DATA.items():
-        if stored_q.strip().lower() == q:
-            return stored_a
-
-    # optional: partial match when no exact match is found
-    for stored_q, stored_a in QA_DATA.items():
-        if q in stored_q.strip().lower():
-            return stored_a
-
-    return "Sorry, I don't have an answer for that question yet."
-
-Search = st.text_input("Search")
-if Search:
-    answer = get_answer(Search)
-    if answer.startswith("sorry"):
-        st.warning(answer)
-    
-    else:
-            st.success(answer)
 
 
 
