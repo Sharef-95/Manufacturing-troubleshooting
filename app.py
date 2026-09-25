@@ -4,8 +4,7 @@ st.title("Manufacturing Troubleshooting Guide")
 """
 Vista Search Engine
 ------------------
-You fill in the questions and answers below.
-Type a question -> get the answer.
+
 """
 from rapidfuzz import fuzz
 from Rigid1 import Rigid1
