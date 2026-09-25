@@ -10,7 +10,8 @@ QA_DATA = {
     "Vacuum Issues": "Check vacuum level by adjusting vacuum knob located behind the machine."
     "if vacuum knob doesn't work, call maintenance.",
     "Blurry Barcodes": "Increase vacuum level, by turning vacuum knob clockwise",
-    "Banding": "step 1: wet wipe all printheads\n\n"
+    "Banding": 
+"step 1: wet wipe all printheads.\n\n"
 "step 2: short purge all printheads.\n\n"
 "step 3: Dry wipe all printheads.\n\n"
 "step 4: print nozzle test.\n\n"
