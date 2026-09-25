@@ -13,8 +13,8 @@ QA_DATA = {
     "Banding": "step 1: wet wipe all printheads\n\n"
 "step 2: short purge all printheads.\n\n"
 "step 3: Dry wipe all printheads.\n\n"
-    "step 4: print nozzle test.\n\n"
-    "if banding is still present after wiping, call your supervisor",
+"step 4: print nozzle test.\n\n"
+"if banding is still present after wiping, call your supervisor.",
     
     "Computer Frozen": "Restart DURST program.",
     "Drying Issues": "call maintenance.",
