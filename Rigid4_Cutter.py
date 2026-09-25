@@ -6,6 +6,7 @@ QA_DATA = {
 "Vacuum Issues":"adgust vacuum to the desired setting for the media\n\n"
 "for decals adjust the vacuum setting between 3-5. ",
 
+"frozen":"Restart DURST app",
 "Banding":"step 1: wet wipe all printheads\n\n"
 "step 2: short purge all printheads.\n\n"
 "step 3: Dry wipe all printheads.\n\n"
