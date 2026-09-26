@@ -5,6 +5,34 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
+
+    
+    "What causes color registration error?": "Substrate slip, low vacuum level, or mechanical misalignment.",
+
+
+    "How do you fix colour registration?": "Increase the vacuum level until the substrate is held flat and registration error is within tolerance.",
+
+    "What is the registration tolerance?": "0.70 mm is the acceptable misregistration limit.",
+
+    "vacuum level": "5 for magnets, 10 for sheets",
+
+
+    "What is the vacuum level for magnets?": "5.",
+
+    "What is the vacuum level for foamboard?": "10.",
+
+    "What is the vacuum level for lawnsign?": "10.",
+
+    "What is the vacuum level for foamboards?": "10.",
+
+    "What's the vacuum level for lawnsigns ?": "10.",
+
+    "material slipping ": "Increase vacuum level",
+
+    "Feeding issues ": "take the sheet out, and re-feed it. If the problem persists, call maintenance. ",
+
+    "crooked sheet, skewed sheet": "Increase vacuum level, If the problem persists, call maintenance.",
+    
    "Door Issues": "Open door, then re-close gently.\n\n"
                 "If it doesn't work, call maintenance.",
 
