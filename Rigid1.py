@@ -5,50 +5,73 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-    "Door Issues": "open door, re-close gently."
-    "if it doesn't work call maintenance. ",
-    "Vacuum Issues": "Check vacuum level by adjusting vacuum knob located behind the machine."
-    "if vacuum knob doesn't work, call maintenance.",
-    "Blurry Barcodes": "Increase vacuum level, by turning vacuum knob clockwise",
-    "Banding": 
-"step 1: wet wipe all printheads.\n\n"
-"step 2: short purge all printheads.\n\n"
-"step 3: Dry wipe all printheads.\n\n"
-"step 4: print nozzle test.\n\n"
-"if banding is still present after wiping, call your supervisor.",
-    
-    "Computer Frozen": "Restart DURST program.",
-    "Drying Issues": "call maintenance.",
-    "Initialization Issues": "step 1: go printer tab \n\n"
-    "step 2:click initialize Sledge\n\n"
-    "step 3 click initilize printer"
-    "if it's still not initilizing, restart the machine.",
-    "Missing Nozzles": "step 1: wet wipe printheads"
-    "step 2:long purge "
-    "step 3: dry wipe."
-    "repeat if missing nozzles are starting toto recover. ",
-    "Lois Sensor Issue": "call maintenance.",
-    "Purge Tub Error": "open purge tub, re-close it gently.",
-    "Registration Issues": "Check vacuum level.",
-    "UV Issues": "on printer tab, turn UV lamp off, and turn back on.\n\n"
-    "if UV lamp is still not working, restart the machine.",
-    "Communication Issues": "restart the machine.",
-    "Head Crash": "on printer tab. Click initilize printer.",
-    "Ink Leak": "Call maintenance.",
-    "Jam": "on printer tab. Click initilize printer",
-    "Sledge Control Error": "on printer tab. Click initilize sledge.",
-    "Feeding Unit Error": "Check feeding switch is on. The sitch is located at the bottom-left of the front end of the machine.",
-    "Computer Frozen": "Restart DURST program.",
-    "Feeder Wheels Not Coming Down": "Check feeding switch is on\n\n."
-    " The switch is located at the bottom-left of the front end of the machine.",
-    "Not Recognizing Purge Tub Is Open for Purge": "open purge tub, re-close it gently.",
-    "UV Lamp Error After Sledge Crash": "on printer tab, turn UV lamp off, and turn it back on.\n\n"
-"if it doesn't work restart the machine\n\n"
-"if it still not worling after restarting the machine, call maintenance.",
-    "Power Trip Off": "Restart the machine",
-    "ink spray":"short purge all printheads, and dry wipe.",
-    "Error In Checking Printhead Ink Tanks":"Left up ink waste lever, and close down gently.\n\n"
-"if error isn't cleared, call maintenance."
+   "Door Issues": "Open door, then re-close gently.\n\n"
+                "If it doesn't work, call maintenance.",
+
+"Vacuum Issues": "Check the vacuum level by adjusting the vacuum knob located behind the machine.\n\n"
+                  "If the vacuum knob doesn't work, call maintenance.",
+
+"Blurry Barcodes": "Increase the vacuum level by turning the vacuum knob clockwise.",
+
+"Banding": "Step 1: Wet wipe all printheads.\n\n"
+           "Step 2: Short purge all printheads.\n\n"
+           "Step 3: Dry wipe all printheads.\n\n"
+           "Step 4: Print nozzle test.\n\n"
+           "If banding is still present after wiping, call your supervisor.",
+
+"Computer Frozen": "Restart the DURST program.",
+
+"Drying Issues": "Call maintenance.",
+
+"Initialization Issues": "Step 1: Go to the Printer tab.\n\n"
+                          "Step 2: Click Initialize Sledge.\n\n"
+                          "Step 3: Click Initialize Printer.\n\n"
+                          "If it's still not initializing, restart the machine.",
+
+"Missing Nozzles": "Step 1: Wet wipe printheads.\n\n"
+                   "Step 2: Long purge.\n\n"
+                   "Step 3: Dry wipe.\n\n"
+                   "Repeat if the missing nozzles are starting to recover.",
+
+"Lois Sensor Issue": "Call maintenance.",
+
+"Purge Tub Error": "Open the purge tub, then re-close it gently.",
+
+"Registration Issues": "Check the vacuum level.",
+
+"UV Issues": "On the Printer tab, turn the UV lamp off, then turn it back on.\n\n"
+  "If the UV lamp is still not working, restart the machine.",
+
+"Communication Issues": "Restart the machine.",
+
+"Head Crash": "On the Printer tab, click Initialize Printer.",
+
+"Ink Leak": "Call maintenance.",
+
+"Jam": "On the Printer tab, click Initialize Printer.",
+
+"Sledge Control Error": "On the Printer tab, click Initialize Sledge.",
+
+"Feeding Unit Error": "Check that the feeding switch is on.\n\n"
+    "The switch is located at the bottom-left of the front end of the machine.",
+
+"Feeder Wheels Not Coming Down": "Check that the feeding switch is on.\n\n"
+    "The switch is located at the bottom-left of the front end of the machine.",
+
+"Not Recognizing Purge Tub Is Open for Purge": "Open the purge tub, then re-close it gently.",
+
+"UV Lamp Error After Sledge Crash": "On the Printer tab, turn the UV lamp off, then turn it back on.\n\n"
+  "If it doesn't work, restart the machine.\n\n"
+  "If it still isn't working after restarting the machine, call maintenance.",
+
+"Power Trip Off": "Restart the machine.",
+
+"Ink Spray": "Short purge all printheads, then dry wipe.",
+
+"Error In Checking Printhead Ink Tanks": "Lift up the ink waste lever, then close it down gently.\n\n"
+    "If the error isn't cleared, call maintenance.",
+
+
    
 }
 

@@ -5,104 +5,159 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-"Drying Issues":"Call maintenance",
-"Lois Sensor Issue":"Call maintenance",
-"Vacuum Issues":"adgust vacuum to the desired setting for the media\n\n"
-"for decals adjust the vacuum setting between 3-5. ",
 
-"frozen":"Restart DURST app",
-"Banding":"step 1: wet wipe all printheads\n\n"
-"step 2: short purge all printheads.\n\n"
-"step 3: Dry wipe all printheads.\n\n"
-"if banding is still present after wiping, call your supervisor/PC",
 
-"Computer Frozen":"Restart DURST program.",
-"Door Issues": "open door, re-close gently.",
-"Initialization Issues":"step 1: go printer tab \n\n"
-    "step 2:click initialize Sledge\n\n"
-    "step 3 click initilize printer"
-    "if it's still not initilizing, restart the machine.",
-"Missing Nozzles":"wet wipe all printheads\n\n"
-"step 2: short purge all printheads.\n\n"
-"step 3: Dry wipe all printheads.\n\n"
-"if nozzles are still missing, call your supervisor",
-"Purge Tub Error":"open purge tub, re-close gently.",
-"Registration Issues":"Check vacuum setting",
-"UV Issues":"on printer tab, turn UV lamp off, and turn it back on.\n\n"
-"if it doesn't work restart the machine\n\n"
-"if it still not worling after restarting the machine, call maintenance.",
-"Blurry Barcodes":"Check vacuum settings\n\n"
-"adgust vacuum to the desired setting for the media\n\n"
-"for decals adjust the vacuum setting between 3-5. ",
+"Drying Issues": "Call maintenance.",
 
-"Communication Issues":"restart the machine\n\n"
-"if you still have communciation issues after restrating the machine, call maintenance.",
-"Head Crash":"on printer tab. Click initilize printer.",
-"Ink Leak":"Call maintenance.",
-"Jam":"Check vacuum settings\n\n"
-"adgust vacuum to the desired setting for the media\n\n"
-"for decals adjust the vacuum setting between 3-5.",
+"Lois Sensor Issue": "Call maintenance.",
 
-"Loading Issues":"",
-"Sledge Control Unit Error":"on printer tab. Click initilize sledge.",
-"Sledge Error":"on printer tab. Click initilize sledge.",
-"Front To Back Registration":"Insure vacuum level is at 10\n\n"
+"Vacuum Issues": "Adjust the vacuum to the desired setting for the media.\n\n"
+"For decals, adjust the vacuum setting between 3 and 5.",
+
+"frozen": "Restart the DURST app.",
+
+"Banding": "Step 1: Wet-wipe all printheads.\n\n"
+"Step 2: Perform a short purge on all printheads.\n\n"
+"Step 3: Dry-wipe all printheads.\n\n"
+"If banding is still present after wiping, call your supervisor/PC.",
+
+"Computer Frozen": "Restart the DURST program.",
+
+"Door Issues": "Open the door and re-close it gently.",
+
+"Initialization Issues": "Step 1: Go to the Printer tab.\n\n"
+"Step 2: Click Initialize Sledge.\n\n"
+"Step 3: Click Initialize Printer.\n\n"
+"If it still does not initialize, restart the machine.",
+
+"Missing Nozzles": "Step 1: Wet-wipe all printheads.\n\n"
+"Step 2: Perform a short purge on all printheads.\n\n"
+"Step 3: Dry-wipe all printheads.\n\n"
+"If nozzles are still missing, call your supervisor.",
+
+"Purge Tub Error": "Open the purge tub and re-close it gently.",
+
+"Registration Issues": "Check the vacuum setting.",
+
+"UV Issues": "Go to the Printer tab, turn the UV lamp off, and turn it back on.\n\n"
+"If it doesn't work, restart the machine.\n\n"
+"If it is still not working after restarting the machine, call maintenance.",
+
+"Blurry Barcodes": "Check the vacuum settings.\n\n"
+"Adjust the vacuum to the desired setting for the media.\n\n"
+"For decals, adjust the vacuum setting between 3 and 5.",
+
+"Communication Issues": "Restart the machine.\n\n"
+"If you still have communication issues after restarting the machine, call maintenance.",
+
+"Head Crash": "Go to the Printer tab and click Initialize Printer.",
+
+"Ink Leak": "Call maintenance.",
+
+"Jam": "Check the vacuum settings.\n\n"
+"Adjust the vacuum to the desired setting for the media.\n\n"
+"For decals, adjust the vacuum setting between 3 and 5.",
+
+"Loading Issues": "Call maintenance.",
+
+"Sledge Control Unit Error": "Go to the Printer tab and click Initialize Sledge.",
+
+"Sledge Error": "Go to the Printer tab and click Initialize Sledge.",
+
+"Front To Back Registration": "Ensure the vacuum level is set to 10.\n\n"
 "When loading the back: Make sure the sheet is positioned to the left side of the machine.\n\n"
 "When loading the front: Make sure the sheet is positioned to the right side of the machine.\n\n"
-"if you still having front and back registration issues, call maintenance.",
-"Crash Sensor Triggered":"restart the machine.",
-"Purgetub Open Error":"open purge tub, re-close gently.",
-"White Nozzles Missing Not Matching Master":"step 1: short purge spot colours only.\n\n"
-"Step2: Dry wipe white printheads only.\n\n"
-"if nozzles are not matching Master still, call for your supervisor/PC.",
-"Feeding Error":"Check feeding switch is on\n\n."
-    " The switch is located at the bottom-left of the front end of the machine.",
+"If you are still having front-to-back registration issues, call maintenance.",
 
-"Ink System Air Leak":"call maintenance.",
-"Broken Spindles":"call maintenance.",
-"Print Skew":"Check vacuum settings.",
-"UV Lamps Not Turning On":"on printer tab, turn UV lamp off, and turn back on.\n\n"
-    "if UV lamp is still not working, restart the machine.",
-"Ink Spots":"step 1: wet wipe all printheads\n\n"
-"step 2: short purge all printheads.\n\n"
-"step 3: Dry wipe all printheads.\n\n"
-"if ink spots are still present after wiping, call your supervisor/PC",
-"Ink Overspray":"step 1: wet wipe all printheads\n\n"
-"step 2: short purge all printheads.\n\n"
-"step 3: Dry wipe all printheads.\n\n"
-"if overspray is still present after wiping, call your supervisor/PC",
-"Print Off Center":"call maintenance.",
-"Ink Water Mark":"call maintenance.",
-"Error In Checking Printhead Ink Tanks":"Left up ink waste lever, and close down gently.\n\n"
-"if error isn't cleared, call maintenance.",
-"Missing Nozzles Causing Banding":"call maintenance.",
-"Failed To Control Continuous Feeder Error":"Check feeding switch is on\n\n."
-    " The switch is located at the bottom-left of the front end of the machine.",
-"UV Lamps Won't Heat Up":"Restart the machine.\n\n"
-"if still not working, call maintenance.",
-"Unable To Switch Off The Head Voltage Error":"call maintenance.",
-"Ink Not Registering":"call your supervisor/PC.",
-"Rabbit Scanner Not Working":"call maintenance.",
-"Reading Image File Failed":"call maintenance.",
-"Print Head Carriage":"on printer tab. Click initilize sledge.",
-    "Feeding Unit Error": "Check feeding switch is on. The sitch is located at the bottom-left of the front end of the machine.",
-"Unable To Scan Ink In":"restart the machine.",
-"Ink Marks On Foam Boards":"call maintenance.",
-"No Heating Up":"restart the machine.",
-"Ink Heating Taking Long Time":"restart the machine.",
-"Failed To Set Jet Straighten Pulse":"call maintenance.",
-"Sheets Skewed":"Increase vacuum level to 10.",
-"Failed Initialization":"restart the machine.",
-"Vacuum System Reference Not Found":"call maintenance.",
-"Media Crashing On First Off":"Check vacuum settings.",
-"Crashed On First Off":"Check vacuum settings.",
-"Sheet Not Moving Into Belt":"call maintenance.",
-"E-stop Pressed":"call maintenance.",
-"Ink Smearing":"call maintenance.",
-"Belt Scraping":"Call maintenance.",
-"Ink Marks On Lawn Signs":"call maintenance.",
-"Keeps Jamming For Paper":"Jamming first-off paper: Increase the vacuum.\n\n"
-"Jamming on decals: Adjust the vacuum level between 3-5"
+"Crash Sensor Triggered": "Restart the machine.",
+
+"Purgetub Open Error": "Open the purge tub and re-close it gently.",
+
+"White Nozzles Missing Not Matching Master": "Step 1: Perform a short purge on spot colours only.\n\n"
+"Step 2: Dry-wipe the white printheads only.\n\n"
+"If the nozzles still do not match the Master, call your supervisor/PC.",
+
+"Feeding Error": "Check that the feeding switch is on.\n\n"
+"The switch is located at the bottom-left of the front end of the machine.",
+
+"Ink System Air Leak": "Call maintenance.",
+
+"Broken Spindles": "Call maintenance.",
+
+"Print Skew": "Check the vacuum settings.",
+
+"UV Lamps Not Turning On": "Go to the Printer tab, turn the UV lamp off, and turn it back on.\n\n"
+"If the UV lamp is still not working, restart the machine.",
+
+"Ink Spots": "Step 1: Wet-wipe all printheads.\n\n"
+"Step 2: Perform a short purge on all printheads.\n\n"
+"Step 3: Dry-wipe all printheads.\n\n"
+"If ink spots are still present after wiping, call your supervisor/PC.",
+
+"Ink Overspray": "Step 1: Wet-wipe all printheads.\n\n"
+"Step 2: Perform a short purge on all printheads.\n\n"
+"Step 3: Dry-wipe all printheads.\n\n"
+"If overspray is still present after wiping, call your supervisor/PC.",
+
+"Print Off Center": "Call maintenance.",
+
+"Ink Water Mark": "Call maintenance.",
+
+"Error In Checking Printhead Ink Tanks": "Lift up the ink waste lever and close it down gently.\n\n"
+"If the error isn't cleared, call maintenance.",
+
+"Missing Nozzles Causing Banding": "Call maintenance.",
+
+"Failed To Control Continuous Feeder Error": "Check that the feeding switch is on.\n\n"
+"The switch is located at the bottom-left of the front end of the machine.",
+
+"UV Lamps Won't Heat Up": "Restart the machine.\n\n"
+"If it is still not working, call maintenance.",
+
+"Unable To Switch Off The Head Voltage Error": "Call maintenance.",
+
+"Ink Not Registering": "Call your supervisor/PC.",
+
+"Rabbit Scanner Not Working": "Call maintenance.",
+
+"Reading Image File Failed": "Call maintenance.",
+
+"Print Head Carriage": "Go to the Printer tab and click Initialize Sledge.",
+
+"Feeding Unit Error": "Check that the feeding switch is on. The switch is located at the bottom-left of the front end of the machine.",
+
+"Unable To Scan Ink In": "Restart the machine.",
+
+"Ink Marks On Foam Boards": "Call maintenance.",
+
+"No Heating Up": "Restart the machine.",
+
+"Ink Heating Taking Long Time": "Restart the machine.",
+
+"Failed To Set Jet Straighten Pulse": "Call maintenance.",
+
+"Sheets Skewed": "Increase the vacuum level to 10.",
+
+"Failed Initialization": "Restart the machine.",
+
+"Vacuum System Reference Not Found": "Call maintenance.",
+
+"Media Crashing On First Off": "Check the vacuum settings.",
+
+"Crashed On First Off": "Check the vacuum settings.",
+
+"Sheet Not Moving Into Belt": "Call maintenance.",
+
+"E-stop Pressed": "Call maintenance.",
+
+"Ink Smearing": "Call maintenance.",
+
+"Belt Scraping": "Call maintenance.",
+
+"Ink Marks On Lawn Signs": "Call maintenance.",
+
+"Keeps Jamming For Paper": "If jamming occurs on first-off paper: Increase the vacuum.\n\n"
+"If jamming occurs on decals: Adjust the vacuum level between 3 and 5."
 }
 
 
