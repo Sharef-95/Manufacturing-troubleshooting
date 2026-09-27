@@ -6,7 +6,7 @@ spell = SpellChecker()
 
 QA_DATA = { 
 
-"Banding":"Step 1: Perfrom a super purge \n\n"
+    "Banding":"Step 1: Perfrom a super purge \n\n"
           "Step 2: On the printer screen. Click maintenance.\n\n"
           "Step 3: Manually wet-wipe all printheads with the solution liquid provided for the machine.\n\n"
           "Step 4: Print nozzles check.\n\n"
