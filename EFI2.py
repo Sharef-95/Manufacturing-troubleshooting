@@ -5,25 +5,36 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-     "Banding",""
-    "Ink Bleed",
-    "Jog Forward/reverse Not Functioning",
-    "Unable To Start Printing",
-    "Pump Not Responding",
-    "Drive Heater Fault",
-    "Missing Nozzles",
-    "Ink Smearing On First Off",
-    "Error - Ink Inside Vacuum Line",
-    "Machine Not Ready",
-    "Heat Plate Not Shutting Off Automatically",
-    "Rip In Blanket",
-    "Burned Through Material",
-    "Ink Smear Flags",
-    "Temperature Settings",
-    "Machine Not Running",
-    "Loose Unplug",
-    "3 Spindle Latches Too Tight",
-    "Emergency E Stop Rope Will Not Reset"
+     "Banding":"Step 1: Perfrom a super purge \n\n"
+          "Step 2: On the printer screen. Click maintenance.\n\n"
+          "Step 3: Manually wet-wipe all printheads with the solution liquid provided for the machine.\n\n"
+          "Step 4: Print nozzles check.\n\n"
+          "If you still have issues, call your supervisor/pc.",
+    "Ink Bleed":"Decrease the temperature by 5.",
+    "Jog Forward/reverse Not Functioning":"Check unwinder, and rewinder buttons are on.\n\n"
+    "Make sure that the direction of unwinder, and rewinder are correct.\n\n"
+    "If you still having issues, restart the machine. ",
+    "Unable To Start Printing":"Turn off all printheads by clicking on them indivisually untill it says 'Available for printing'\n\n"
+    "If still having issues. Restart the machine.",
+    "Pump Not Responding":"Turn off all printheads by clicking on them indivisually untill it says 'Available for printing'",
+    "Drive Heater Fault":"Call maintenance.",
+    "Missing Nozzles":"Step 1: Perfrom a super purge \n\n"
+          "Step 2: On the printer screen. Click maintenance.\n\n"
+          "Step 3: Manually wet-wipe all printheads with the solution liquid provided for the machine.\n\n"
+          "Step 4: Print nozzles check.\n\n"
+          "If you still have issues, call your supervisor/pc.",
+    "Ink Smearing On First Off":"Decrease the temperature by 5.",
+    "Error - Ink Inside Vacuum Line":"Call maintenance.",
+    "Machine Not Ready":"Turn off all printheads by clicking on them indivisually untill it says 'Available for printing'",
+    "Heat Plate Not Shutting Off Automatically":"Call maintenance.",
+    "Rip In Blanket":"Call IT",
+    "Burned Through Material":"Call your supervisor/PC",
+    "Ink Smear":"Decrease the temperature by 5.",
+    "Temperature Settings":"Refer to the temperature record provided on your machine.",
+    "Loose Unplug":"Call maintenance.",
+    "3 Spindle Latches Too Tight":"Call maintenance.",
+    "Emergency E Stop Rope Will Not Reset":"Verify that both windows are fully closed and properly aligned with the sensors.\n\n"
+    "If still having issues, call maintenance.",
 }
 
 
