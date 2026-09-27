@@ -1,8 +1,10 @@
 from spellchecker import SpellChecker
-from rapidfuzz import fuzz
+from rapidfuzz import fuzz, process
 import streamlit as st
 
 spell = SpellChecker()
+
+
 
 QA_DATA = { 
 
@@ -15,6 +17,8 @@ QA_DATA = {
     "What is the registration tolerance?": "0.70 mm is the acceptable misregistration limit.",
 
     "vacuum level": "5 for magnets, 10 for sheets",
+
+    "What is the vacuum level for decals?": "between 3-5.",
 
 
     "What is the vacuum level for magnets?": "5.",
@@ -32,7 +36,6 @@ QA_DATA = {
     "Feeding issues ": "take the sheet out, and re-feed it. If the problem persists, call maintenance. ",
 
     "crooked sheet, skewed sheet": "Increase vacuum level, If the problem persists, call maintenance.",
-    
    "Door Issues": "Open door, then re-close gently.\n\n"
                 "If it doesn't work, call maintenance.",
 
@@ -103,7 +106,6 @@ QA_DATA = {
    
 }
 
-
 def correct_spelling(text):
     words = text.split()
     corrected_words = []
@@ -114,25 +116,58 @@ def correct_spelling(text):
 
     return " ".join(corrected_words)
 
-def get_answer(question: str) -> str:
+
+def smart_search(question: str) -> str:
     question = correct_spelling(question)
 
     q = question.strip().lower()
+    q = q.replace("problems","issues")
+    q = q.replace("problem","issue")
 
-    for stored_q, stored_a in QA_DATA.items():
-        if stored_q.strip().lower() == q:
-            return stored_a
+    # Words that usually don't help identify the actual issue
+    stop_words = {
+        "what", "whats", "what's", "is", "the", "a", "an",
+        "for", "to", "of", "do", "i", "have", "how",
+        "can", "my", "me", "please", "tell", "about",
+        "level", "setting","machine",
+    }
+
+    # Get important words from the user's question
+    q_words = {
+        word.strip(".,?!")
+        for word in q.split()
+        if word.strip(".,?!") not in stop_words
+    }
+
     best_score = 0
     best_answer = None
 
-    # optional: partial match when no exact match is found
     for stored_q, stored_a in QA_DATA.items():
-        score = fuzz.token_set_ratio(q,stored_q.strip().lower())
+
+        stored = stored_q.strip().lower()
+
+        stored_words = {
+            word.strip(".,?!")
+            for word in stored.split()
+            if word.strip(".,?!") not in stop_words
+        }
+
+        # Count important words that appear in both questions
+        matching_words = q_words.intersection(stored_words)
+
+        keyword_score = len(matching_words)
+
+        # Fuzzy similarity
+        fuzzy_score = fuzz.token_set_ratio(q, stored)
+
+        # Combine keyword matching + fuzzy matching
+        score = (keyword_score * 20) + fuzzy_score
+
         if score > best_score:
             best_score = score
             best_answer = stored_a
 
-    if best_score >= 45:
+    if best_answer and best_score >= 45:
         return best_answer
 
     return "Sorry, I don't have an answer for that question yet."
@@ -142,7 +177,7 @@ def Rigid1():
 key="Rigid1")
 
     if Search:
-     answer = get_answer(Search)
+     answer = smart_search(Search)
 
      if answer.lower().startswith("sorry"):
         st.warning(answer)
