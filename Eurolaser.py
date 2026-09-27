@@ -5,28 +5,35 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-    "Power Supply Error",
-    "Not Cutting Through Material",
-    "Aux Drive 0 Not Ready",
-    "Laser Issue",
-    "Cutting Issues",
-    "Vacuum Hose Broken",
-    "Ext. Material Handling 1 Not Ready Error",
-    "Error Code",
-    "Light Curtain Triggered",
-    "Program Issue",
-    "Safety Module Error",
-    "Material Not Advancing",
-    "Camera Not Turning On",
-    "Holder Bar Not Coming Down",
-    "When Cutter Is Moving",
-    "Controller Index Error 00000004",
-    "Not Cutting Through Well",
-    "Not Cutting All The Way Through",
-    "Blade Adjustment",
-    "Aux Driver Not Ready",
-    "Bar Not Advancing Material",
-    "Frozen"
+    "Power Supply Error":" Call maintenance.",
+    "Not Cutting Through Material":"initilize cutting tool",
+    "Aux Drive 0 Not Ready":"1. Locate Aux drive switch at the back of the machine.\n\n"
+      "2. If the switch is set to AUTO, move it to the ON position.\n\n"
+      "3. If the switch is already ON, return it to the AUTO position.\n\n"
+      "If the issue persists, restart the machine and check again.",
+    "Laser Issue":"Call maintenance.",
+    "Cutting Issues":"",
+    "Vacuum Hose Broken":"Call maintenance.",
+    "Ext. Material Handling 1 Not Ready Error":"Call maintenance.",
+    "Light Curtain Triggered":"Check under the machine for fabric material blocking the light curtain.\n\n"
+      "If there nothing blocking it, call maintenance.",
+    "Program Issue":"Restart the cutting program.",
+    "Safety Module Error":"Restart the machine.",
+    "Material Not Advancing":"Make sure that Aux Drive 0 is ready.",
+    "Camera Not Turning On":"Disconnet the green usb that connected to your computer, and re-connect it.",
+    "Holder Bar Not Coming Down":"Make sure that there is no error on your machine screen.",
+    "Controller Index Error 00000004":"Clear the error.\n\n"
+      "Call maintenance if it comes back.",
+    "Not Cutting Through Well":"Call maintenance.",
+    "Not Cutting All The Way Through":"Call maintenance.",
+    "Blade Adjustment":"Call maintenance.",
+    "Aux Driver Not Ready":"1. Locate Aux drive switch at the back of the machine.\n\n"
+      "2. If the switch is set to AUTO, move it to the ON position.\n\n"
+      "3. If the switch is already ON, return it to the AUTO position.\n\n"
+      "If the issue persists, restart the machine and check again.",
+    "Bar Not Advancing Material":"Verify that the black holding bar is locked.\n\n",
+    "Frozen":"Exit the cutting app.\n\n"
+    "If it's still frozen, press alt + F4 on your keyboard.",
 }
 
 
