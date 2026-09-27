@@ -5,6 +5,8 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
+
+    
     "Power Supply Error":" Call maintenance.",
     "Not Cutting Through Material":"initilize cutting tool",
     "Aux Drive 0 Not Ready":"1. Locate Aux drive switch at the back of the machine.\n\n"

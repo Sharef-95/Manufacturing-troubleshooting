@@ -36,7 +36,7 @@ QA_DATA = {
     "Emergency E Stop Rope Will Not Reset":"Verify that both windows are fully closed and properly aligned with the sensors.\n\n"
     "If still having issues, call maintenance.",
     "oil spots / glycol drop":"Verify that the oil tray is not full.\n\n"
-    "If it is, clean it or call maintenance to clean it."
+    "If it is, clean it or call maintenance to clean it.",
 }
 
 

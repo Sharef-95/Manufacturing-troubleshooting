@@ -5,7 +5,8 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-     "Tool Change Required":"Call maintenance.",
+        
+        "Tool Change Required":"Call maintenance.",
         "Program Issue":"Restart cut program, and cut server.",
         "Belt Issue":"Call maintenance.",
         "Blade Adjustment":"Call maintenance.",
