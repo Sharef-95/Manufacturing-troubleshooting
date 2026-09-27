@@ -5,41 +5,45 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-     "Tool Change Required",
-        "Program Issue",
-        "Laser Issue",
-        "Belt Issue",
-        "Blade Adjustment",
-        "Blade Change",
-        "New Blade or Adjust",
-        "Vacuum Generator Error",
-        "Not Cutting Through Banner",
-        "Grab Bar Needs Adjustment",
-        "Blade Broken or Missing",
-        "Cutting Issue",
-        "Safety Device Error",
-        "Emergency Stop",
-        "Excessive Wrinkles Causing Scrap",
-        "Jam",
-        "Blade Adjustment Required",
+     "Tool Change Required":"Call maintenance.",
+        "Program Issue":"Restart cut program, and cut server.",
+        "Belt Issue":"Call maintenance.",
+        "Blade Adjustment":"Call maintenance.",
+        "Blade Change":"Call maintenance.",
+        "New Blade or Adjust":"Call maintenance.",
+        "Vacuum Generator Error":"Clear the error and try again\n\n"
+        "If the issue persits, call maintenance.",
+        "Not Cutting Through Banner":"Ask for blade adjustment/change.",
+        "Grab Bar Needs Adjustment":"Call maintenance.",
+        "Blade Broken or Missing":"Call maintenance.",
+        "Cutting Issue":"Before starting the Cut File.\n\n"
+        "Ensure the material is flat and free of wrinkles.",
+        "Safety Device Error":"Call maintenance.",
+        "Emergency Stop / E-stop":"Locate all Emergency stop buttons.\n\n"
+        "Ensure that they are released.\n\n"
+        "If you still having issues, call maintenance.",
+        "Excessive Wrinkles Causing Scrap":"On the cutters screen, increase the vacuum level to 10"
+        
         "Not Advancing Banners",
-        "Controller Error",
-        "Belt Ripped",
-        "Grab Bar Not Moving Material Forward",
-        "Advance Bar Not Grabbing Banners",
-        "Making Noise",
-        "E-stop Cannot Clear",
-        "Screw Fell Off Grab Bar",
-        "Belt Not Advancing",
-        "Split in Belt",
-        "Light Curtain Issue",
-        "Material Jammed Under Belt",
-        "Belt Lifting",
-        "Thumping Sound When Belt Advances",
-        "Scrap Jammed",
-        "Dancer Bar Not Rotating",
-        "Cut Orientation Issue",
-        "Blade Change Causing Tearing"
+        "Controller Error":"Clear the error.\n\n"
+        "If it comes back, all maintenance",
+        "Belt Ripped":"Call maintenance.",
+        "Grab Bar Not Moving Material Forward":"Call maintenance.",
+        "Advance Bar Not Grabbing Banners":"Call maintenance.",
+        "Making Noise":"Call maintenance.",
+        "E-stop Cannot Clear":"Call maintenance.",
+        "Screw Fell Off Grab Bar":"Call your supervisor/PC.",
+        "Belt Not Advancing":"Call maintenance.",
+        "Split in Belt":"Call maintenance.",
+        "Light Curtain Issue":"Verify that there is nothing blocking light curtain.\n\n"
+        "If not, call maintenance.",
+        "Material Jammed Under Belt":"Call maintenance.",
+        "Belt Lifting":"Call maintenance.",
+        "Thumping Sound When Belt Advances":"Call maintenance.",
+        "Scrap Jammed":"Call maintenance.",
+        "Dancer Bar Not Rotating":"Call maintenance.",
+        
+        "Blade Change Causing Tearing":"Call maintenance.",
 }
 
 
