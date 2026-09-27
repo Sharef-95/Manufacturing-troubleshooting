@@ -46,13 +46,10 @@ Eurolaser()
 # FILL THIS UP  --  add as many question/answer pairs as you want
 # ======================================================================
 QA_DATA = {
-    "color registration": "check vacuum level.",
 
-     "colour registration": "check vacuum level.",
 
     "What causes color registration error?": "Substrate slip, low vacuum level, or mechanical misalignment.",
 
-    "How do you fix color registration?": "Increase the vacuum level until the substrate is held flat and registration error is within tolerance.",
 
     "How do you fix colour registration?": "Increase the vacuum level until the substrate is held flat and registration error is within tolerance.",
 
@@ -60,7 +57,6 @@ QA_DATA = {
 
     "vacuum level": "5 for magnets, 10 for sheets",
 
-    "What is the max vacuum level?": "10.",
 
     "What is the vacuum level for magnets?": "5.",
 
@@ -75,8 +71,6 @@ QA_DATA = {
     "material slipping ": "Increase vacuum level",
 
     "Feeding issues ": "take the sheet out, and re-feed it. If the problem persists, call maintenance. ",
-
-
 
     "crooked sheet, skewed sheet": "Increase vacuum level, If the problem persists, call maintenance.",
 
