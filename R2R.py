@@ -69,7 +69,6 @@ def smart_search(question: str) -> str:
         "level", "setting","machine",
     }
 
-    # Get important words from the user's question
     q_words = {
         word.strip(".,?!")
         for word in q.split()
@@ -89,15 +88,12 @@ def smart_search(question: str) -> str:
             if word.strip(".,?!") not in stop_words
         }
 
-        # Count important words that appear in both questions
         matching_words = q_words.intersection(stored_words)
 
         keyword_score = len(matching_words)
 
-        # Fuzzy similarity
         fuzzy_score = fuzz.token_set_ratio(q, stored)
 
-        # Combine keyword matching + fuzzy matching
         score = (keyword_score * 20) + fuzzy_score
 
         if score > best_score:

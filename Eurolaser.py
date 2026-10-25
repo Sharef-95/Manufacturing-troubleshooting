@@ -35,7 +35,7 @@ QA_DATA = {
       "If the issue persists, restart the machine and check again.",
     "Bar Not Advancing Material":"Verify that the black holding bar is locked.\n\n",
     "Frozen":"Exit the cutting app.\n\n"
-    "If it's still frozen, press alt + F4 on your keyboard.",
+    "If it's still frozen, press alt + F4 on the keyboard.",
 }
 
 
@@ -57,7 +57,6 @@ def smart_search(question: str) -> str:
     q = q.replace("problems","issues")
     q = q.replace("problem","issue")
 
-    # Words that usually don't help identify the actual issue
     stop_words = {
         "what", "whats", "what's", "is", "the", "a", "an",
         "for", "to", "of", "do", "i", "have", "how",
@@ -65,7 +64,6 @@ def smart_search(question: str) -> str:
         "level", "setting","machine",
     }
 
-    # Get important words from the user's question
     q_words = {
         word.strip(".,?!")
         for word in q.split()
@@ -85,15 +83,12 @@ def smart_search(question: str) -> str:
             if word.strip(".,?!") not in stop_words
         }
 
-        # Count important words that appear in both questions
         matching_words = q_words.intersection(stored_words)
 
         keyword_score = len(matching_words)
 
-        # Fuzzy similarity
         fuzzy_score = fuzz.token_set_ratio(q, stored)
 
-        # Combine keyword matching + fuzzy matching
         score = (keyword_score * 20) + fuzzy_score
 
         if score > best_score:
