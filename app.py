@@ -8,32 +8,50 @@ from pathlib import Path
 
 st.markdown("""
     <style>
+
         /* White background */
         .stApp {
             background-color: #FFFFFF;
-            color: #000000;
         }
-
-        /* Black text */
-        .stApp p,
-        .stApp span,
-        .stApp label,
-        .stApp h1,
-        .stApp h2,
-        .stApp h3,
-        .stApp div {
-            color: #000000;
-        }
-
         /*  header color */
         [data-testid="stHeader"] {
             background-color: #00FFFF;
         }
 
-        /*  sidebar */
+        /*  sidebar color */
         [data-testid="stSidebar"] {
             background-color: #00FFFF;
         }
+
+        /* Black text */
+        .stApp p,
+        .stApp h1,
+        .stApp h2,
+        .stApp h3 {
+            color: #000000;
+        }
+
+        /* Font sizes */
+        h1 {
+            font-size: 26px !important;
+        }
+
+        h2 {
+            font-size: 23px !important;
+        }
+
+        h3 {
+            font-size: 30px !important;
+        }
+
+        .stApp p {
+            font-size: 14px !important;
+        }
+
+        .stTextInput input {
+            font-size: 14px !important;
+        }
+
     </style>
 """, unsafe_allow_html=True)
 
