@@ -1,5 +1,56 @@
+
 import streamlit as st
-st.title("Manufacturing Troubleshooting Guide")
+
+from pathlib import Path
+
+
+# Set website background to white
+
+st.markdown("""
+    <style>
+        /* White background */
+        .stApp {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+
+        /* Black text */
+        .stApp p,
+        .stApp span,
+        .stApp label,
+        .stApp h1,
+        .stApp h2,
+        .stApp h3,
+        .stApp div {
+            color: #000000;
+        }
+
+        /*  header color */
+        [data-testid="stHeader"] {
+            background-color: #00FFFF;
+        }
+
+        /*  sidebar */
+        [data-testid="stSidebar"] {
+            background-color: #00FFFF;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
+
+# Logo location
+BASE_DIR = Path(__file__).resolve().parent
+LOGO_PATH = BASE_DIR / "assets" / "logo.png"
+
+
+col1, col2 = st.columns([1, 5])
+
+with col1:
+    st.image(str(LOGO_PATH), width=100)
+
+with col2:
+    st.title("Manufacturing Troubleshooting")
 
 """
 Vista Search Engine
