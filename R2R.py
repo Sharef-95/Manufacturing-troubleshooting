@@ -5,13 +5,14 @@ import streamlit as st
 spell = SpellChecker()
 
 QA_DATA = { 
-       "Air Pressure Issue",
-        "Alignment Issue",
-        "Banding",
-        "Cleaning Roll Change",
-        "Curing Module Failure",
-        "Error Code",
-        "System Error",
+       "Air Pressure Issue","Call maintenance.",
+        "Alignment Issue","Call maintenance.",
+        "Banding","Perform a hard clean on all colors.",
+        "Cleaning Roll Change","Call maintenance.",
+        "Curing Module Failure","Call maintenance.",
+        
+        "System Error","Restart press"
+        "if issue persits, call maintenance."
         "First Off Failed",
         "Head Strike",
         "Ink Not Filling",

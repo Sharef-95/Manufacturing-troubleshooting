@@ -4,6 +4,7 @@ import streamlit as st
 from pathlib import Path
 
 
+
 # Set website background to white
 
 st.markdown("""
@@ -11,7 +12,8 @@ st.markdown("""
 
         /* White background */
         .stApp {
-            background-color: #FFFFFF;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         /*  header color */
         [data-testid="stHeader"] {
