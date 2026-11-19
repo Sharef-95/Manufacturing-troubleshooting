@@ -37,6 +37,11 @@ QA_DATA = {
     "If still having issues, call maintenance.",
     "oil spots / glycol drop":"Verify that the oil tray is not full.\n\n"
     "If it is, clean it or call maintenance to clean it.",
+    "press stuck on maintenance position":"Step 1: Open the machine window and re-close.\n\n"
+    "Step 2: On the machine's touch screen, select home.\n\n"
+    "Step 3 : On the machine's screen, change the media to a different media then click maintenance.\n\n"
+    "Step 4 : Return to original media, and start printing."
+    "If the problem persists, call maintenance.",
 }
 
 
